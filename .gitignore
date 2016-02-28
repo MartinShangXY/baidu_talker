@@ -1,3 +1,6 @@
+# Presonal Private Files
+/manager/private_start.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
