@@ -1,6 +1,10 @@
 # Presonal Private Files
 /manager/private_start.py
+# Personal Get Files
+*.mp3
 
+# Pycharm Setting Files
+.idea
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

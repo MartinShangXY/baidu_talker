@@ -1,4 +1,4 @@
-class Config:
+class ApiConfig:
     # not None
     client_id = None
     client_secret = None
@@ -44,3 +44,7 @@ class Config:
                 'pit': self.pit,
                 'vol': self.vol,
                 'per': self.per}
+
+
+class SoftConfig:
+    mp3_dict = r'../output/mp3/'

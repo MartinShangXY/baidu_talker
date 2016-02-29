@@ -2,6 +2,8 @@ import json
 
 import requests
 
+from core.sentence import Sentence
+
 
 class Talker:
     conf = None
@@ -16,4 +18,4 @@ class Talker:
         if (text.__len__() <= 0 or text.__len__() >= 1024):
             raise TypeError('text length error')
 
-        return requests.post(self.conf.tk_url, data=self.conf.get_tk_params(text, self.access_token))
+        return Sentence(text, requests.post(self.conf.tk_url, data=self.conf.get_tk_params(text, self.access_token)))

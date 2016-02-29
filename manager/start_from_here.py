@@ -1,7 +1,8 @@
-from core.config import Config
+from core.config import ApiConfig
 from core.talker import Talker
 
 if __name__ == '__main__':
-    conf = Config('your client_id', 'your client_secret')
+    conf = ApiConfig('your client_id', 'your client_secret')
     tk = Talker(conf)
-    tk.talk('aa')
+    re = tk.talk('你口你口妮')
+    re.to_file()
