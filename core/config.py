@@ -1,12 +1,14 @@
+# 调用百度语音借口的相关配置
+# 参考 http://yuyin.baidu.com/docs/tts/136
 class ApiConfig:
     # not None
     client_id = None
     client_secret = None
     # alternative
-    spd = '5'
-    pit = '5'
-    vol = '5'
-    per = '0'
+    spd = None
+    pit = None
+    vol = None
+    per = None
     # const
     tk_url = 'http://tsn.baidu.com/text2audio'
     at_url = 'https://openapi.baidu.com/oauth/2.0/token'
@@ -29,11 +31,13 @@ class ApiConfig:
         self.vol = str(vol)
         self.per = str(per)
 
+    # 获取请求 access_token 接口的参数
     def get_at_params(self):
         return {'grant_type': self.grant_type,
                 'client_id': self.client_id,
                 'client_secret': self.client_secret}
 
+    # 获取语音设置参数
     def get_tk_params(self, text, access_token):
         return {'tex': text,
                 'lan': self.lan,
@@ -46,5 +50,7 @@ class ApiConfig:
                 'per': self.per}
 
 
+# 软件设置
 class SoftConfig:
+    # 合成的mp3文件的保存位置
     mp3_dict = r'../output/mp3/'

@@ -4,7 +4,7 @@
 *.mp3
 
 # Pycharm Setting Files
-.idea
+.idea/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
